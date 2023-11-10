@@ -1,0 +1,26 @@
+{
+
+    "translator": "Localization made by DeepL",
+    
+    "logo": "\tGDEXE [Paths Ripper] - Program to change the paths to the servers for the game Geometry Dash.\n\tCreated by Masaddox; Version v2.0.0; Release date 10.11.2023; {}\n",
+    
+    "messages": {
+        "get_path_to_gd_exe": "Drag and drop an EXE file into this window (or write the path to the file): ",
+        "paths_were_found": "The initial paths were defined as: {}",
+        "enter_new_paths": "Enter a new path (exactly 33 characters): ",
+        "press_enter_to_exit": "Press ENTER to exit: "
+    },
+    
+    "logs": {
+        "open_gd_exe": "[Opening File...]",
+        "pathway_detection_in_gd_exe": "[Determining the initial paths...]",
+        "change_of_paths": "[Changing Paths...]",
+        "done": "[Done!]"
+    },
+    
+    "errors": {
+        "paths_have_not_been_found": "[Error!] Initial paths not defined!",
+        "incorrect_length_of_new_paths": "[Error!] The path you entered consists of {} character(s)!"
+    }
+    
+}
