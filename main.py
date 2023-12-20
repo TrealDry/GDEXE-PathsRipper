@@ -1,9 +1,7 @@
 import os
 import json
-import importlib
 from sys import exit
 import base64 as b64
-import importlib.util
 from uuid import uuid4
 
 
@@ -99,13 +97,16 @@ def main():
 
     initial_paths = gd_text[index_p - 33: index_p]
 
+    if initial_paths[:5].decode('utf-8') == "ttps:":  # 2.2 https
+        initial_paths = gd_text[index_p - 34: index_p]
+
     print(lang["messages"]["paths_were_found"].format(initial_paths.decode('utf-8')))
     new_path = ""
 
     while 1:
-        new_path = input(lang["messages"]["enter_new_paths"])
+        new_path = input(lang["messages"]["enter_new_paths"].format(len(initial_paths)))
 
-        if len(new_path) != 33:
+        if len(new_path) != len(initial_paths):
             print(f"\n{lang['errors']['incorrect_length_of_new_paths'].format(len(new_path))}\n")
         else:
             new_path = new_path.encode()
